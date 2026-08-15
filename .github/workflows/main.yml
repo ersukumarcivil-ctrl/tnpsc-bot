@@ -2,18 +2,18 @@ name: TNPSC Bot Monitor
 
 on:
   schedule:
-    - cron: '*/5 * * * *' # ஒவ்வொரு 5 நிமிடத்திற்கு ஒருமுறை இயங்கும்
-  workflow_dispatch: # மேனுவலாக செக் செய்ய
+    - cron: '*/5 * * * *' 
+  workflow_dispatch: # 
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4  # v3-க்கு பதிலாக v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5  # v4-க்கு பதிலாக v5
         with:
           python-version: '3.9'
 
